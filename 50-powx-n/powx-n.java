@@ -1,25 +1,16 @@
 class Solution {
-
     public double myPow(double x, int n) {
-        long N = n;
-
-        if (N < 0) {
-            x = 1 / x;
+        int N = n;
+        if (n < 0) {
+            x = 1/x;
             N = -N;
-        }
-
-        return helper(x, N);
+        }   
+        return Pow(x,N);
     }
-
-    public double helper(double x, long n) {
-        if (n == 0)
-            return 1.0;
-
-        double half = helper(x, n / 2);
-
-        if (n % 2 == 0)
-            return half * half;
-
-        return x * half * half;
+    public double Pow(double a, int b){
+        if(b == 0) return 1;
+        double call = Pow(a,b/2);
+        if(b % 2 == 0) return call * call;
+        else return call * call * a;
     }
 }
