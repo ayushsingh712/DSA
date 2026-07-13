@@ -3,8 +3,7 @@ class Solution {
         if(root == null) return 0;
         int l = minDepth(root.left);
         int r = minDepth(root.right);
-        if(root.left == null) return 1 + Math.max(l,r);
-        if(root.right == null) return 1 + Math.max(l,r);
+        if(root.left == null || root.right == null) return 1 + Math.max(l,r);
         return 1 + Math.min(l,r);
     }
 }
