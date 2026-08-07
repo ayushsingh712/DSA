@@ -3,9 +3,11 @@ class Solution {
         int res = 0;
         Arrays.sort(g);
         Arrays.sort(s);
-        int i = 0;
+        int i = 0; 
         int j = 0;
-        while(i <= g.length -1 && j <= s.length -1){
+        int m = g.length;
+        int n = s.length;
+        while(i < m && j < n){
             if(s[j] >= g[i]){
                 res++;
                 j++;
