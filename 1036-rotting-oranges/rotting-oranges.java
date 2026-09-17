@@ -1,5 +1,4 @@
 class Solution {
-
     public class Triplet {
         int row;
         int col;
@@ -11,7 +10,6 @@ class Solution {
             this.time = time;
         }
     }
-
     public int orangesRotting(int[][] grid) {
 
         int m = grid.length;
